@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container-fluid">
+    <section class="pagina-encabezado rounded-3 p-4 p-md-5">
+        <p class="text-uppercase fw-bold text-info mb-2">Colecciones</p>
+        <h1 class="display-5 fw-bold">{{ titulo }} de materiales</h1>
+        <p class="lead">{{ mensaje }}</p>
+    </section>
+
+    <section class="mt-5">
+        <h2 class="h3 text-primary">Explora nuestras colecciones</h2>
+        <p>La biblioteca ofrece materiales en distintos formatos y áreas del conocimiento. Estas son las principales categorías disponibles para consulta y préstamo.</p>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-3 mt-2">
+            <div class="col"><article class="card tarjeta-biblioteca h-100"><div class="card-body"><h3 class="h5 card-title">Libros</h3><p class="card-text">Obras de consulta, literatura y textos académicos para apoyar el estudio y la investigación.</p></div></article></div>
+            <div class="col"><article class="card tarjeta-biblioteca h-100"><div class="card-body"><h3 class="h5 card-title">Revistas</h3><p class="card-text">Publicaciones periódicas con artículos, noticias y avances recientes de diversas disciplinas.</p></div></article></div>
+            <div class="col"><article class="card tarjeta-biblioteca h-100"><div class="card-body"><h3 class="h5 card-title">Tesis</h3><p class="card-text">Trabajos de grado y proyectos de investigación elaborados por la comunidad universitaria.</p></div></article></div>
+            <div class="col"><article class="card tarjeta-biblioteca h-100"><div class="card-body"><h3 class="h5 card-title">Recursos digitales</h3><p class="card-text">Bases de datos, libros electrónicos y otros materiales en línea disponibles para consulta académica.</p></div></article></div>
+        </div>
+    </div>
+{% endblock %}

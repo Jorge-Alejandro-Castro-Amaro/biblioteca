@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container-fluid">
+    <section class="pagina-encabezado rounded-3 p-4 p-md-5">
+        <p class="text-uppercase fw-bold text-info mb-2">Estamos para ayudarte</p>
+        <h1 class="display-5 fw-bold">{{ titulo }}</h1>
+        <p class="lead">{{ mensaje }}</p>
+    </section>
+
+    <section class="mt-5">
+        <h2 class="h3 text-primary">Información de contacto</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-3 mt-2">
+            <div class="col"><article class="card tarjeta-biblioteca h-100"><div class="card-body"><h3 class="h5 card-title">Dirección</h3><p class="card-text">Av. del Tecnológico 1500, Edificio Central, Leon Gto.</p></div></article></div>
+            <div class="col"><article class="card tarjeta-biblioteca h-100"><div class="card-body"><h3 class="h5 card-title">Correo electrónico</h3><p class="card-text"><a href="mailto:biblioteca@universidadtecnologica.edu">biblioteca@universidadtecnologica.edu</a></p></div></article></div>
+            <div class="col"><article class="card tarjeta-biblioteca h-100"><div class="card-body"><h3 class="h5 card-title">Horario de atención</h3><p class="card-text mb-1">Lunes a viernes, de 8:00 a 20:00.</p><p class="card-text">Sábados, de 9:00 a 13:00.</p></div></article></div>
+        </div>
+    </div>
+{% endblock %}

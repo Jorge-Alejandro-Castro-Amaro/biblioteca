@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container-fluid">
+    <section class="pagina-encabezado rounded-3 p-4 p-md-5">
+        <p class="text-uppercase fw-bold text-info mb-2">Atención a la comunidad</p>
+        <h1 class="display-5 fw-bold">{{ titulo }} de la biblioteca</h1>
+        <p class="lead">{{ mensaje }}</p>
+    </section>
+
+    <section class="mt-5">
+        <h2 class="h3 text-primary">¿Cómo podemos ayudarte?</h2>
+        <p>Nuestros servicios están disponibles para facilitar el acceso a la información y apoyar las actividades académicas de estudiantes, docentes e investigadores.</p>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-3 mt-2">
+            <div class="col"><article class="card tarjeta-biblioteca h-100"><div class="card-body"><h3 class="h5 card-title">Préstamo de libros</h3><p class="card-text">Lleva materiales de la colección a domicilio por el período establecido y renueva el préstamo según las condiciones vigentes.</p></div></article></div>
+            <div class="col"><article class="card tarjeta-biblioteca h-100"><div class="card-body"><h3 class="h5 card-title">Consulta en sala</h3><p class="card-text">Utiliza nuestras salas de lectura y consulta los materiales de la biblioteca en un ambiente cómodo y tranquilo.</p></div></article></div>
+            <div class="col"><article class="card tarjeta-biblioteca h-100"><div class="card-body"><h3 class="h5 card-title">Acceso a recursos digitales</h3><p class="card-text">Consulta bases de datos, revistas y libros electrónicos para ampliar tus fuentes de información académica.</p></div></article></div>
+            <div class="col"><article class="card tarjeta-biblioteca h-100"><div class="card-body"><h3 class="h5 card-title">Orientación bibliográfica</h3><p class="card-text">Recibe apoyo para buscar información, seleccionar fuentes confiables y organizar referencias para tus trabajos.</p></div></article></div>
+        </div>
+    </div>
+{% endblock %}

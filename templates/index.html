@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container-fluid">
+    <section class="pagina-encabezado rounded-3 text-center p-4 p-md-5">
+        <p class="text-uppercase fw-bold text-info mb-2">Biblioteca Universitaria Central</p>
+        <h1 class="display-5 fw-bold">Bienvenidos a un lugar para descubrir</h1>
+        <p class="lead mx-auto">{{ mensaje }}</p>
+        <a class="btn btn-info mt-3" href="{{ url_for('catalogo') }}">Explorar el catálogo</a>
+    </section>
+
+    <section class="mt-5">
+        <h2 class="h3 text-primary">Conocimiento al alcance de todos</h2>
+        <p>Nuestra biblioteca reúne recursos impresos y digitales para acompañar el aprendizaje, apoyar la docencia e impulsar la investigación. También ofrecemos espacios y orientación para que cada persona encuentre la información que necesita.</p>
+        <div class="card tarjeta-biblioteca border-start border-4 border-success mt-4">
+            <div class="card-body">
+                <h3 class="h5 card-title">Horario general de atención</h3>
+                <p class="card-text mb-1">Lunes a viernes, de 8:00 a 20:00.</p>
+                <p class="card-text">Sábados, de 9:00 a 13:00.</p>
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}
