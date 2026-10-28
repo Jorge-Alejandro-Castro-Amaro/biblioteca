@@ -1,0 +1,136 @@
+/* Importación de fuente sobria y moderna */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Paleta cromática minimalista y académica */
+  --color-bg: #f9fafb;
+  --color-surface: #ffffff;
+  --color-text-primary: #111827;
+  --color-text-secondary: #4b5563;
+  --color-accent: #0f172a;
+  --color-border: #e5e7eb;
+  --shadow-subtle: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.04), 0 4px 6px -4px rgba(0, 0, 0, 0.02);
+}
+
+/* Configuración General */
+body {
+  background-color: var(--color-bg) !important;
+  color: var(--color-text-primary) !important;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Header & Navegación Minimalista */
+header nav.navbar {
+  background-color: var(--color-surface) !important;
+  border-bottom: 1px solid var(--color-border);
+  padding: 1rem 0;
+}
+
+.navbar-brand {
+  color: var(--color-text-primary) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em;
+  font-size: 1.15rem;
+}
+
+.navbar-nav .nav-link {
+  color: var(--color-text-secondary) !important;
+  font-weight: 500;
+  font-size: 0.925rem;
+  transition: color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--color-text-primary) !important;
+  font-weight: 600;
+}
+
+/* Encabezados de Páginas (Páginas de Sección) */
+.pagina-encabezado {
+  background: var(--color-accent) !important;
+  color: #ffffff !important;
+  border-radius: 12px !important;
+  box-shadow: var(--shadow-subtle);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.pagina-encabezado p.text-info {
+  color: #94a3b8 !important; /* Neutraliza el azul chillón del text-info de Bootstrap */
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+}
+
+.pagina-encabezado p.lead {
+  color: #cbd5e1 !important;
+  font-weight: 400;
+  max-width: 46rem;
+}
+
+/* Títulos y Secciones */
+h2.h3.text-primary {
+  color: var(--color-text-primary) !important; /* Reemplaza el azul predeterminado por tono oscuro */
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Tarjetas (Cards) Elegantes */
+.tarjeta-biblioteca {
+  background-color: var(--color-surface) !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: 10px !important;
+  box-shadow: var(--shadow-subtle);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-biblioteca:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.tarjeta-biblioteca .card-title {
+  color: var(--color-text-primary);
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.tarjeta-biblioteca .card-text {
+  color: var(--color-text-secondary);
+  font-size: 0.925rem;
+}
+
+/* Enlaces y Botones */
+a {
+  color: var(--color-text-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: #000000;
+}
+
+.btn-info {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+  color: var(--color-accent) !important;
+  font-weight: 600;
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.btn-info:hover {
+  background-color: #f1f5f9 !important;
+  border-color: #f1f5f9 !important;
+}
+
+/* Pie de Página */
+footer {
+  border-top-color: var(--color-border) !important;
+  color: var(--color-text-secondary) !important;
+  font-size: 0.875rem;
+}
