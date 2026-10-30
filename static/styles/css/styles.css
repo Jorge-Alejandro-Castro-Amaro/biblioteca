@@ -1,87 +1,162 @@
-/* Importación de fuente sobria y moderna */
+/* Tipografía sobria para conservar el carácter académico de la biblioteca */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Paleta cromática minimalista y académica */
-  --color-bg: #f9fafb;
+  /* Base neutra con acentos de cempasúchil y tonos de la noche */
+  --color-bg: #faf8f4;
   --color-surface: #ffffff;
-  --color-text-primary: #111827;
-  --color-text-secondary: #4b5563;
-  --color-accent: #0f172a;
-  --color-border: #e5e7eb;
-  --shadow-subtle: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
-  --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.04), 0 4px 6px -4px rgba(0, 0, 0, 0.02);
+  --color-text-primary: #292235;
+  --color-text-secondary: #625b68;
+  --color-accent: #33233e;
+  --color-marigold: #e6a323;
+  --color-petal: #a63d68;
+  --color-border: #e9e1d7;
+  --shadow-subtle: 0 1px 3px 0 rgba(48, 34, 54, 0.06), 0 1px 2px -1px rgba(48, 34, 54, 0.05);
+  --shadow-hover: 0 12px 24px -8px rgba(48, 34, 54, 0.15), 0 4px 8px -4px rgba(48, 34, 54, 0.08);
 }
 
 /* Configuración General */
 body {
   background-color: var(--color-bg) !important;
+  background-image:
+    radial-gradient(ellipse at 12% 8%, rgba(230, 163, 35, 0.055), transparent 28rem),
+    radial-gradient(ellipse at 92% 38%, rgba(166, 61, 104, 0.035), transparent 32rem) !important;
   color: var(--color-text-primary) !important;
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Header & Navegación Minimalista */
+/* Navegación */
 header nav.navbar {
-  background-color: var(--color-surface) !important;
-  border-bottom: 1px solid var(--color-border);
+  background: linear-gradient(110deg, #30213b, #45304b 72%, #503044) !important;
+  border-bottom: 0;
   padding: 1rem 0;
+  box-shadow: 0 4px 16px rgba(39, 27, 45, 0.12);
+  position: relative;
+  isolation: isolate;
+}
+
+header nav.navbar::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  right: 0;
+  bottom: -5px;
+  left: 0;
+  height: 8px;
+  background-image:
+    radial-gradient(circle, #30213b 1.5px, transparent 2px),
+    repeating-linear-gradient(90deg, #e6a323 0 24px, transparent 24px 32px);
+  background-position: center, left bottom;
+  background-size: 8px 8px, 32px 5px;
+  background-repeat: repeat, repeat-x;
+}
+
+header nav.navbar > .container-fluid {
+  position: relative;
+  z-index: 1;
 }
 
 .navbar-brand {
-  color: var(--color-text-primary) !important;
+  color: #fffaf0 !important;
   font-weight: 700 !important;
   letter-spacing: -0.02em;
   font-size: 1.15rem;
 }
 
+.navbar-brand::before {
+  content: "✿";
+  display: inline-block;
+  margin-right: 0.55rem;
+  color: var(--color-marigold);
+  font-size: 1.1em;
+}
+
 .navbar-nav .nav-link {
-  color: var(--color-text-secondary) !important;
+  color: rgba(255, 250, 240, 0.78) !important;
   font-weight: 500;
   font-size: 0.925rem;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  border-radius: 6px;
 }
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-  color: var(--color-text-primary) !important;
+  color: #ffd77d !important;
   font-weight: 600;
 }
 
-/* Encabezados de Páginas (Páginas de Sección) */
+.navbar-nav .nav-link.active {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Encabezados de páginas */
 .pagina-encabezado {
-  background: var(--color-accent) !important;
+  background:
+    radial-gradient(circle at 92% 18%, rgba(230, 163, 35, 0.16), transparent 9rem),
+    radial-gradient(circle at 83% 92%, rgba(166, 61, 104, 0.18), transparent 13rem),
+    linear-gradient(120deg, #30213b, #45304b 72%, #503044) !important;
   color: #ffffff !important;
   border-radius: 12px !important;
-  box-shadow: var(--shadow-subtle);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 12px 28px rgba(48, 34, 54, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.pagina-encabezado::after {
+  content: "✿  ✦  ✿";
+  position: absolute;
+  z-index: 0;
+  right: 1.25rem;
+  bottom: -1.5rem;
+  color: rgba(255, 215, 125, 0.22);
+  font-size: clamp(3.5rem, 9vw, 7rem);
+  letter-spacing: 0.08em;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.pagina-encabezado > * {
+  position: relative;
+  z-index: 1;
 }
 
 .pagina-encabezado p.text-info {
-  color: #94a3b8 !important; /* Neutraliza el azul chillón del text-info de Bootstrap */
+  color: #ffd77d !important;
   letter-spacing: 0.08em;
   font-size: 0.8rem;
 }
 
 .pagina-encabezado p.lead {
-  color: #cbd5e1 !important;
+  color: #e8dfea !important;
   font-weight: 400;
   max-width: 46rem;
 }
 
 /* Títulos y Secciones */
 h2.h3.text-primary {
-  color: var(--color-text-primary) !important; /* Reemplaza el azul predeterminado por tono oscuro */
+  color: var(--color-text-primary) !important;
   font-weight: 700;
   letter-spacing: -0.02em;
 }
 
-/* Tarjetas (Cards) Elegantes */
+h2.h3.text-primary::before {
+  content: "✿";
+  margin-right: 0.55rem;
+  color: var(--color-petal);
+  font-size: 0.8em;
+  vertical-align: 0.08em;
+}
+
+/* Tarjetas */
 .tarjeta-biblioteca {
   background-color: var(--color-surface) !important;
   border: 1px solid var(--color-border) !important;
   border-radius: 10px !important;
+  border-top: 3px solid rgba(230, 163, 35, 0.72) !important;
   box-shadow: var(--shadow-subtle);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -89,6 +164,7 @@ h2.h3.text-primary {
 .tarjeta-biblioteca:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-hover);
+  border-top-color: var(--color-petal) !important;
 }
 
 .tarjeta-biblioteca .card-title {
@@ -97,35 +173,53 @@ h2.h3.text-primary {
   font-size: 1.05rem;
 }
 
+.tarjeta-biblioteca .card-title::before {
+  content: "✽";
+  margin-right: 0.45rem;
+  color: var(--color-marigold);
+  font-size: 0.9em;
+}
+
 .tarjeta-biblioteca .card-text {
   color: var(--color-text-secondary);
   font-size: 0.925rem;
 }
 
-/* Enlaces y Botones */
+/* Enlaces y botones */
 a {
-  color: var(--color-text-primary);
+  color: #704052;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
 a:hover {
-  color: #000000;
+  color: var(--color-petal);
+}
+
+a:focus-visible,
+.navbar-nav .nav-link:focus-visible,
+.btn-info:focus-visible {
+  outline: 3px solid var(--color-marigold);
+  outline-offset: 3px;
 }
 
 .btn-info {
-  background-color: #ffffff !important;
-  border-color: #ffffff !important;
-  color: var(--color-accent) !important;
+  background-color: var(--color-marigold) !important;
+  border-color: var(--color-marigold) !important;
+  color: #30213b !important;
   font-weight: 600;
   padding: 0.6rem 1.4rem;
-  border-radius: 6px;
-  transition: all 0.2s ease;
+  border-radius: 7px;
+  box-shadow: 0 3px 8px rgba(230, 163, 35, 0.2);
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn-info:hover {
-  background-color: #f1f5f9 !important;
-  border-color: #f1f5f9 !important;
+  background-color: #f2b83f !important;
+  border-color: #f2b83f !important;
+  color: #30213b !important;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 12px rgba(230, 163, 35, 0.28);
 }
 
 /* Pie de Página */
@@ -133,4 +227,22 @@ footer {
   border-top-color: var(--color-border) !important;
   color: var(--color-text-secondary) !important;
   font-size: 0.875rem;
+}
+
+footer::before {
+  content: "✿  ·  ✦  ·  ✿";
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-petal);
+  font-size: 0.95rem;
+  letter-spacing: 0.15em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
